@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+env/
+.env
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+*.local
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+image.png
+# (Actually, keep image.png as requested by user to show the interface)
+!image.png
