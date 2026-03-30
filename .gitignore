@@ -32,3 +32,5 @@ Thumbs.db
 image.png
 # (Actually, keep image.png as requested by user to show the interface)
 !image.png
+
+.vercel

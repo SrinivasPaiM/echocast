@@ -17,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/voices")
+@app.get("/api/voices")
 async def get_voices():
     try:
         voices = await edge_tts.list_voices()
@@ -25,7 +25,7 @@ async def get_voices():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/sample/{voice_id}")
+@app.get("/api/sample/{voice_id}")
 async def get_sample(voice_id: str):
     try:
         # Find the voice to get its friendly name if possible
@@ -45,7 +45,7 @@ async def get_sample(voice_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/tts")
+@app.post("/api/tts")
 async def generate_tts(data: dict):
     text = data.get("text")
     voice = data.get("voice")
